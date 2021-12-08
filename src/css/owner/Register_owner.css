@@ -1,0 +1,16 @@
+.register-owner {
+  margin: auto;
+  width: 20%;
+  margin-top: 8%;
+  padding: 10px;
+}
+.register-owner h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.register-owner .passwordfield {
+  display: flex;
+}
+.register-owner .passwordfield .eye {
+  margin-top: 25px;
+}

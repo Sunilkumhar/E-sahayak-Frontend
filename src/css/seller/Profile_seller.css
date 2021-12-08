@@ -1,0 +1,21 @@
+.seller-profile {
+  margin: auto;
+  width: 20%;
+  margin-top: 10%;
+  padding: 10px;
+}
+.seller-profile img {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.seller-profile p {
+  font-size: 30px;
+}
+.seller-profile .seller-edit {
+  margin-right: 25px;
+}
+.seller-profile .addnew-pdt {
+  margin-left: 25px;
+}

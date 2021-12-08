@@ -1,0 +1,21 @@
+.options-owner {
+  margin: auto;
+  margin-top: 20%;
+  padding: 10px;
+}
+.options-owner .options {
+  margin: auto;
+  text-align: center;
+}
+.options-owner .login-owner-link {
+  margin-right: 25px;
+}
+.options-owner .login-owner-link .login-button {
+  font-size: 35px !important;
+}
+.options-owner .register-owner-link {
+  margin-left: 25px;
+}
+.options-owner .register-owner-link .register-button {
+  font-size: 35px !important;
+}

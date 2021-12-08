@@ -1,0 +1,21 @@
+.owner-profile {
+  margin: auto;
+  width: 20%;
+  margin-top: 10%;
+  padding: 10px;
+}
+.owner-profile img {
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+.owner-profile p {
+  font-size: 25px;
+}
+.owner-profile .owner-edit {
+  margin-right: 25px;
+}
+.owner-profile .addnew-pdt {
+  margin-left: 25px;
+}

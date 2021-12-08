@@ -1,0 +1,40 @@
+.login-seller {
+  margin: auto;
+  width: 20%;
+  margin-top: 13%;
+  padding: 10px;
+}
+.login-seller h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.login-seller .passwordfield {
+  display: flex;
+}
+.login-seller .passwordfield .eye {
+  margin-top: 25px;
+}
+
+.login-seller #proceed {
+  display: block;
+  cursor: pointer;
+  padding: 10px 20px;
+  margin-top: 16px;
+  transition: all 0.2s;
+  background-color: rgb(104, 104, 250);
+  letter-spacing: 1.5px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+.login-seller #proceed:hover {
+  background-color: #2623f3;
+  color: #fbf5f3;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 10px #1a1919;
+}
+.login-seller #proceed:active {
+  background-color: rgba(63, 243, 46, 0.822);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px #111111;
+}

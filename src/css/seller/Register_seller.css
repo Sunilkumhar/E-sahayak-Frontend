@@ -1,0 +1,16 @@
+.register-seller {
+  margin: auto;
+  width: 20%;
+  margin-top: 8%;
+  padding: 10px;
+}
+.register-seller h1 {
+  font-size: 50px;
+  text-align: center;
+}
+.register-seller .passwordfield {
+  display: flex;
+}
+.register-seller .passwordfield .eye {
+  margin-top: 25px;
+}

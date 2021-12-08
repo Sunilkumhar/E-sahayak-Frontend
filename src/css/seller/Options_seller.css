@@ -1,0 +1,21 @@
+.options-seller {
+  margin: auto;
+  margin-top: 20%;
+  padding: 10px;
+}
+.options-seller .options {
+  margin: auto;
+  text-align: center;
+}
+.options-seller .login-seller-link {
+  margin-right: 25px;
+}
+.options-seller .login-seller-link .login-button {
+  font-size: 35px !important;
+}
+.options-seller .register-seller-link {
+  margin-left: 25px;
+}
+.options-seller .register-seller-link .register-button {
+  font-size: 35px !important;
+}

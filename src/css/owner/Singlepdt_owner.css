@@ -1,0 +1,11 @@
+.pdt {
+  width: 20%;
+}
+.pdt img {
+  width: 100px;
+  display: block;
+  margin: 0 auto;
+}
+.pdt p {
+  font-size: 20px;
+}
