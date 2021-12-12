@@ -7,6 +7,7 @@ import axios from "../../axios";
 function Addnew_seller() {
   const [buy_name, setbuy_name] = useState("");
   const [buy_price, setbuy_price] = useState("");
+  const [buy_quantity, setbuy_quantity] = useState("");
   const [buy_image, setbuy_image] = useState("");
 
   const handleChangename = (e) => {
@@ -14,6 +15,9 @@ function Addnew_seller() {
   };
   const handleChangeprice = (e) => {
     setbuy_price(e.target.value);
+  };
+  const handleChangeqty = (e) => {
+    setbuy_quantity(e.target.value);
   };
   const handleChangeImage = (e) => {
     console.log(e.target.files[0]);
@@ -25,6 +29,7 @@ function Addnew_seller() {
     const fd = new FormData();
     fd.append("buy_image", buy_image);
     fd.append("buy_price", buy_price);
+    fd.append("buy_quantity", buy_quantity);
     fd.append("buy_name", buy_name);
 
     console.log(fd);
@@ -69,6 +74,17 @@ function Addnew_seller() {
           name="buy_price"
           autoComplete="buy_price"
           onChange={handleChangeprice}
+        />
+        <TextField
+          type="number"
+          margin="normal"
+          required
+          fullWidth
+          id="buy_quantity"
+          label="Quantity"
+          name="buy_quantity"
+          autoComplete="buy_quantity"
+          onChange={handleChangeqty}
         />
         <input type="file" name="seller_image" onChange={handleChangeImage} />
         <Button

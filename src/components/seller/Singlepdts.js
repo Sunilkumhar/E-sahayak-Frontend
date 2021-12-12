@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import "../../css/seller/Singlepdts.css";
 
-function Singlepdts({ _id, buy_name, buy_price, buy_image }) {
+function Singlepdts({ _id, buy_name, buy_price, buy_image, buy_quantity }) {
   const handleEdit = () => {
     localStorage.setItem("edit_id", _id);
   };
@@ -14,6 +14,7 @@ function Singlepdts({ _id, buy_name, buy_price, buy_image }) {
 
       <p>Name : {buy_name}</p>
       <p>Price : {buy_price}</p>
+      <p>Quantity : {buy_quantity}</p>
       <Link
         to="/seller/pdt/edit"
         style={{ textDecoration: "none" }}

@@ -44,7 +44,7 @@ const routes = [
   { path: "/owner/staff/edit", element: <Staff_edit_owner /> },
   { path: "/owner/pdt/edit", element: <Pdt_owner_edit /> },
   { path: "/owner/ordermore", element: <Ordermore_owner /> },
-  // product edit owner
+  // product edit owner i.e  pdt_owner_edit
 ];
 
 export default routes;

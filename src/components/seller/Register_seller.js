@@ -114,7 +114,6 @@ function Register_seller() {
           label="Phone"
           name="seller_phone"
           autoComplete="seller_phone"
-          autoFocus
           onChange={handleChange}
         />
         <TextField
@@ -126,7 +125,6 @@ function Register_seller() {
           label="Email"
           name="seller_email"
           autoComplete="seller_email"
-          autoFocus
           onChange={handleChange}
         />
         <TextField
@@ -138,7 +136,6 @@ function Register_seller() {
           label="Shop Address"
           name="shop_address"
           autoComplete="shop_address"
-          autoFocus
           onChange={handleChange}
         />
         <TextField
@@ -150,7 +147,6 @@ function Register_seller() {
           label="UPI"
           name="seller_upi"
           autoComplete="seller_upi"
-          autoFocus
           onChange={handleChange}
         />
         <div className="passwordfield">

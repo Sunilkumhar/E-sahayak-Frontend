@@ -49,6 +49,7 @@ function Ordermore_owner() {
                     buy_price={x.buy_price}
                     buy_seller_name={x.buy_seller_name}
                     buy_upi={x.buy_upi}
+                    buy_quantity={x.buy_quantity}
                     _id={x._id}
                   />
                 </div>

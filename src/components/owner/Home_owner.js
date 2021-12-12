@@ -67,7 +67,7 @@ function Home_owner() {
               <h1>You Have No pdts...</h1>
             ) : (
               allpdts.map((x) => (
-                <Grid item xs={4}>
+                <Grid item xs={6}>
                   <div className="col-6" key={x._id}>
                     <Singlepdt_owner
                       pdt_name={x.pdt_name}

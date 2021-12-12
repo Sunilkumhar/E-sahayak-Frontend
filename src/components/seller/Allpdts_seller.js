@@ -54,6 +54,7 @@ function Allpdts_seller() {
                   <Singlepdts
                     buy_name={x.buy_name}
                     buy_price={x.buy_price}
+                    buy_quantity={x.buy_quantity}
                     buy_image={x.buy_image}
                     _id={x._id}
                   />

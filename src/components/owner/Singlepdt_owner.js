@@ -14,6 +14,8 @@ function Singlepdts({
 }) {
   const handleEdit = () => {
     localStorage.setItem("edit_id", _id);
+    console.log(pdt_image);
+    //to="/owner/pdt/edit"
   };
   return (
     <div className="pdt">
@@ -25,20 +27,14 @@ function Singlepdts({
       <p>Bought Price : {pdt_bought_price}</p>
       <p>Current Profit/Qty. : {pdt_current_price - pdt_bought_price}</p>
 
-      <Link
-        to="/owner/pdt/edit"
-        style={{ textDecoration: "none" }}
-        className="product-seller"
+      <Button
+        size="large"
+        variant="contained"
+        color="primary"
+        onClick={handleEdit}
       >
-        <Button
-          size="large"
-          variant="contained"
-          color="primary"
-          onClick={handleEdit}
-        >
-          Edit Product
-        </Button>
-      </Link>
+        Edit Product
+      </Button>
     </div>
   );
 }
