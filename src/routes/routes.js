@@ -24,27 +24,30 @@ import Profile_edit_owner from "../components/owner/Profile_edit_owner";
 const routes = [
   { path: "/", element: <Home /> },
   //seller
-  { path: "/seller/addnew", element: <Addnew_seller /> },
-  { path: "/seller/allpdts", element: <Allpdts_seller /> },
-  { path: "/seller/pdt/edit", element: <Pdt_seller_edit /> },
+  { path: "/seller/options", element: <Options_seller /> },
   { path: "/seller/login", element: <Login_seller /> },
   { path: "/seller/register", element: <Register_seller /> },
-  { path: "/seller/options", element: <Options_seller /> },
+  { path: "/seller/allpdts", element: <Allpdts_seller /> },
   { path: "/seller/profile", element: <Profile_seller /> },
   { path: "/seller/profile/edit", element: <Profile_edit_seller /> },
+  { path: "/seller/pdt/edit", element: <Pdt_seller_edit /> },
+  { path: "/seller/addnew", element: <Addnew_seller /> },
+
   //owner
-  { path: "/owner/home", element: <Home_owner /> },
+  { path: "/owner/options", element: <Options_owner /> },
   { path: "/owner/login", element: <Login_owner /> },
   { path: "/owner/register", element: <Register_owner /> },
-  { path: "/owner/options", element: <Options_owner /> },
+  { path: "/owner/home", element: <Home_owner /> },
   { path: "/owner/profile", element: <Profile_owner /> },
   { path: "/owner/profile/edit", element: <Profile_edit_owner /> },
-  { path: "/owner/staff", element: <Staff_owner /> },
   { path: "/owner/profile/addstaff", element: <Staffadd_owner /> },
+  { path: "/owner/staff", element: <Staff_owner /> },
   { path: "/owner/staff/edit", element: <Staff_edit_owner /> },
-  { path: "/owner/pdt/edit", element: <Pdt_owner_edit /> },
   { path: "/owner/ordermore", element: <Ordermore_owner /> },
+  // { path: "/owner/pdt/edit", element: <Pdt_owner_edit /> },
+
   // product edit owner i.e  pdt_owner_edit
+  //Pay salary for staff remaining.
 ];
 
 export default routes;

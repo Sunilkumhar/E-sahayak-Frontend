@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "../../css/seller/Profile_seller.css";
 
 import axios from "../../axios";
+import { BASE_URL } from "../../baseURL";
 
 function Profile_seller() {
   const [user, setuser] = useState([]);
@@ -23,7 +24,7 @@ function Profile_seller() {
 
   return (
     <div className="seller-profile">
-      <img src={`http://localhost:5000/${user.seller_image}`} alt="" />
+      <img src={`${BASE_URL}/${user.seller_image}`} alt="" />
       <p>Name : {user.seller_name}</p>
       <p>Email : {user.seller_email}</p>
       <p>Phone : {user.seller_phone}</p>

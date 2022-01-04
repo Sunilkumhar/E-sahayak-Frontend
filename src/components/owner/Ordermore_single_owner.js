@@ -4,6 +4,7 @@ import { TextField } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import "../../css/owner/Ordermore_single_owner.css";
 import axios from "../../axios";
+import { BASE_URL } from "../../baseURL";
 
 function Ordermore_single_owner({
   buy_email,
@@ -94,7 +95,7 @@ function Ordermore_single_owner({
   };
   return (
     <div className="pdt">
-      <img src={`http://localhost:5000/${buy_image}`} alt="" />
+      <img src={`${BASE_URL}/${buy_image}`} alt="" />
 
       <p>Name : {buy_name}</p>
       <p>Seller Email : {buy_email}</p>

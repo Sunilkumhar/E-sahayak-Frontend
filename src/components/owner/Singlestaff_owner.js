@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Button from "@material-ui/core/Button";
 import "../../css/owner/Singlepdt_owner.css";
+import { BASE_URL } from "../../baseURL";
 
 function Singlestaff_owner({
   staff_name,
@@ -20,7 +21,7 @@ function Singlestaff_owner({
 
   return (
     <div className="pdt">
-      <img src={`http://localhost:5000/${staff_image}`} alt="" />
+      <img src={`${BASE_URL}/${staff_image}`} alt="" />
 
       <p>Name : {staff_name}</p>
       <p>Phone : {staff_phone}</p>

@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import "../../css/owner/Profile_owner.css";
 
 import axios from "../../axios";
+import { BASE_URL } from "../../baseURL";
 
 function Profile_owner() {
   const [user, setuser] = useState([]);
 
   useEffect(() => {
+    console.log(BASE_URL);
     axios
       .get(`/${localStorage.getItem("id")}`)
       .then((res) => {
@@ -23,7 +25,7 @@ function Profile_owner() {
 
   return (
     <div className="owner-profile">
-      <img src={`http://localhost:5000/${user.owner_image}`} alt="" />
+      <img src={`${BASE_URL}/${user.owner_image}`} alt="" />
       <p>Name : {user.owner_name}</p>
       <p>Email : {user.owner_email}</p>
       <p>Phone : {user.owner_phone}</p>

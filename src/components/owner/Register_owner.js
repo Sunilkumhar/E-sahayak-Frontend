@@ -11,7 +11,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 
 import "../../css/owner/Register_owner.css";
 
-import axios from "../../axios";
+import axios from "axios";
 
 function Register_owner() {
   let initVals = {
@@ -61,7 +61,7 @@ function Register_owner() {
       fd.append("owner_upi", vals.owner_upi);
       console.log(fd);
       await axios
-        .post("/register", fd)
+        .post("https://stormy-island-55490.herokuapp.com/register", fd)
         .then((res) => {
           console.log(res);
           localStorage.setItem("token", res.headers["x-auth-token"]);

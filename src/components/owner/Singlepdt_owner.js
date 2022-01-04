@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Button from "@material-ui/core/Button";
 import "../../css/owner/Singlepdt_owner.css";
+import { BASE_URL } from "../../baseURL";
 
 function Singlepdts({
   _id,
@@ -19,7 +20,7 @@ function Singlepdts({
   };
   return (
     <div className="pdt">
-      <img src={`http://localhost:5000/${pdt_image}`} alt="" />
+      <img src={`${BASE_URL}/${pdt_image}`} alt="" />
 
       <p>Name : {pdt_name}</p>
       <p>Price : {pdt_current_price}</p>
