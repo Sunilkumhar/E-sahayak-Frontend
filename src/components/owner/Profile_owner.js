@@ -11,7 +11,6 @@ function Profile_owner() {
   const [user, setuser] = useState([]);
 
   useEffect(() => {
-    console.log(BASE_URL);
     axios
       .get(`/${localStorage.getItem("id")}`)
       .then((res) => {

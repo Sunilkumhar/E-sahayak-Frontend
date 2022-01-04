@@ -3,13 +3,15 @@ import { TextField, Button } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import { useNavigate } from "react-router-dom";
 
 import "../../css/seller/Register_seller.css";
 
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
 
 function Profile_edit_seller() {
+  const history = useNavigate();
+
   let initVals = {
     seller_name: "",
     seller_email: "",
@@ -63,7 +65,7 @@ function Profile_edit_seller() {
       })
       .then((res) => {
         console.log(123);
-        window.location.href = `${FrontEnd_URL}/seller/profile`;
+        history("/seller/profile");
         seterrmsg("");
       })
       .catch((err) => {

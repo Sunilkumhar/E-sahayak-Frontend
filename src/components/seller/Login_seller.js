@@ -3,11 +3,13 @@ import { TextField } from "@material-ui/core";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import "../../css/seller/Login_seller.css";
+import { useNavigate } from "react-router-dom";
 
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
 
 function Login_seller() {
+  const history = useNavigate();
+
   let initVals = { seller_email: "", seller_password: "" };
   const [vals, setVal] = useState(initVals);
   const [err, seterr] = useState("");
@@ -36,7 +38,7 @@ function Login_seller() {
         localStorage.setItem("token", res.data);
         seterr("");
         console.log(err);
-        window.location.href = `${FrontEnd_URL}/seller/allpdts`;
+        history("/seller/allpdts");
       })
       .catch((err) => {
         seterr("Invalid Email-Id or Password");

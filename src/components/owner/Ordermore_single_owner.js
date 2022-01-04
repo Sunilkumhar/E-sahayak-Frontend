@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { TextField } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 import Button from "@material-ui/core/Button";
 import "../../css/owner/Ordermore_single_owner.css";
 import axios from "../../axios";
-import { BASE_URL, FrontEnd_URL } from "../../baseURL";
+import { BASE_URL } from "../../baseURL";
 
 function Ordermore_single_owner({
   buy_email,
@@ -16,6 +17,7 @@ function Ordermore_single_owner({
   buy_quantity,
   _id,
 }) {
+  const history = useNavigate();
   const [qty, setqty] = useState(0);
   const [price, setprice] = useState(0);
   const handleChange = (e) => {
@@ -82,7 +84,7 @@ function Ordermore_single_owner({
 
     await axios.post(`/sendmail`, fd_email).then((res) => {
       console.log("emailsent");
-      window.location.href = `${FrontEnd_URL}/owner/hone`;
+      history("/owner/home");
     });
   };
   return (

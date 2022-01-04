@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 import { Link } from "react-router-dom";
 
 import "../../css/seller/Pdt_seller_edit.css";
 
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
 
 function Pdt_seller_edit() {
+  const history = useNavigate();
+
   const [buy_name, setbuy_name] = useState("");
   const [buy_price, setbuy_price] = useState("");
   const [buy_quantity, setbuy_quantity] = useState("");
@@ -53,7 +55,7 @@ function Pdt_seller_edit() {
       .then((res) => {
         console.log(123);
         localStorage.removeItem("edit_id");
-        window.location.href = `${FrontEnd_URL}/seller/allpdts`;
+        history("/seller/allpdts");
       });
   };
 

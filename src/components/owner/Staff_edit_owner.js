@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 import "../../css/owner/Staff_edit_owner.css";
 
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
+
 function Staff_edit_owner() {
+  const history = useNavigate();
+
   let initVals = {
     staff_name: "",
     staff_phone: "",
@@ -52,7 +55,7 @@ function Staff_edit_owner() {
       .then((res) => {
         console.log(res);
         localStorage.removeItem("edit_id");
-        window.location.href = `${FrontEnd_URL}/owner/staff`;
+        history("/owner/staff");
       })
       .catch((err) => {
         console.log(err.message);

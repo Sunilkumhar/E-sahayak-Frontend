@@ -8,7 +8,9 @@ function home() {
   return (
     <div className="main-page">
       <h1>Welcome to E-sahayak</h1>
-      <h3>A site made for all local shop owners</h3>
+      <h3>
+        A site made for all local shop owners to keep track of their products.
+      </h3>
       <div className="options">
         <Link
           to="/owner/options"

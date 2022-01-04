@@ -8,13 +8,15 @@ import {
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import { useNavigate } from "react-router-dom";
 
 import "../../css/owner/Register_owner.css";
 
 import axios from "../../axios";
-import { BASE_URL, FrontEnd_URL } from "../../baseURL";
 
 function Register_owner() {
+  const history = useNavigate();
+
   let initVals = {
     owner_name: "",
     owner_email: "",
@@ -66,7 +68,7 @@ function Register_owner() {
         .then((res) => {
           console.log(res);
           localStorage.setItem("token", res.headers["x-auth-token"]);
-          window.location.href = `${FrontEnd_URL}/owner/home`;
+          history("/owner/home");
           seterrmsg("");
         })
         .catch((err) => {

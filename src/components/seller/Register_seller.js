@@ -8,13 +8,15 @@ import {
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import { useNavigate } from "react-router-dom";
 
 import "../../css/seller/Register_seller.css";
 
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
 
 function Register_seller() {
+  const history = useNavigate();
+
   let initVals = {
     seller_name: "",
     seller_email: "",
@@ -68,7 +70,7 @@ function Register_seller() {
         .then((res) => {
           console.log(res);
           localStorage.setItem("token", res.headers["x-auth-token"]);
-          window.location.href = `${FrontEnd_URL}/seller/allpdts`;
+          history("/seller/allpdts");
           seterrmsg("");
         })
         .catch((err) => {

@@ -3,13 +3,15 @@ import { TextField, Button } from "@material-ui/core";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import VisibilityIcon from "@material-ui/icons/Visibility";
+import { useNavigate } from "react-router-dom";
 
 import "../../css/owner/Register_owner.css";
 
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
 
 function Profile_edit_owner() {
+  const history = useNavigate();
+
   let initVals = {
     owner_name: "",
     owner_email: "",
@@ -63,7 +65,7 @@ function Profile_edit_owner() {
       })
       .then((res) => {
         console.log(123);
-        window.location.href = `${FrontEnd_URL}/owner/profile`;
+        history("/owner/profile");
         seterrmsg("");
       })
       .catch((err) => {

@@ -1,13 +1,14 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { TextField } from "@material-ui/core";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import "../../css/owner/Login_owner.css";
 
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
 
 function Login_owner() {
+  const history = useNavigate();
   let initVals = { owner_email: "", owner_password: "" };
   const [vals, setVal] = useState(initVals);
   const [err, seterr] = useState("");
@@ -36,7 +37,7 @@ function Login_owner() {
         localStorage.setItem("token", res.data);
         seterr("");
         console.log(err);
-        window.location.href = `${FrontEnd_URL}/owner/home`;
+        history("/owner/home");
       })
       .catch((err) => {
         seterr("Invalid Email-Id or Password");

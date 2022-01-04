@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 import "../../css/seller/Addnew_seller.css";
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
 
 function Addnew_seller() {
+  const history = useNavigate();
+
   const [buy_name, setbuy_name] = useState("");
   const [buy_price, setbuy_price] = useState("");
   const [buy_quantity, setbuy_quantity] = useState("");
@@ -42,7 +44,7 @@ function Addnew_seller() {
       })
       .then((res) => {
         console.log(res);
-        window.location.href = `${FrontEnd_URL}/seller/allpdts`;
+        history("/seller/allpdts");
       })
       .catch((err) => {
         console.log(err);

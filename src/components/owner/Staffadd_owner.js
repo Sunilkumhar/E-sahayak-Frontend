@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { TextField, Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 import "../../css/owner/Staffadd_owner.css";
 
 import axios from "../../axios";
-import { FrontEnd_URL } from "../../baseURL";
 
 function Staffadd_owner() {
+  const history = useNavigate();
+
   let initVals = {
     staff_name: "",
     staff_phone: "",
@@ -44,7 +46,7 @@ function Staffadd_owner() {
       })
       .then((res) => {
         console.log(res);
-        window.location.href = `${FrontEnd_URL}/owner/staff`;
+        history("/owner/staff");
       })
       .catch((err) => {
         console.log(err.message);
