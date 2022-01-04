@@ -7,6 +7,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import "../../css/seller/Register_seller.css";
 
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 
 function Profile_edit_seller() {
   let initVals = {
@@ -62,7 +63,7 @@ function Profile_edit_seller() {
       })
       .then((res) => {
         console.log(123);
-        window.location.href = "http://localhost:3000/seller/profile";
+        window.location.href = `${FrontEnd_URL}/seller/profile`;
         seterrmsg("");
       })
       .catch((err) => {

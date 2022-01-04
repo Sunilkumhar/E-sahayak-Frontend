@@ -4,7 +4,7 @@ import { TextField } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import "../../css/owner/Ordermore_single_owner.css";
 import axios from "../../axios";
-import { BASE_URL } from "../../baseURL";
+import { BASE_URL, FrontEnd_URL } from "../../baseURL";
 
 function Ordermore_single_owner({
   buy_email,
@@ -37,27 +37,21 @@ function Ordermore_single_owner({
 
     //update owner
     await axios
-      .post(
-        `http://localhost:5000/product/${localStorage.getItem("id")}/addpdt`,
-        fd_owner,
-        {
-          headers: {
-            "x-auth-token": localStorage.getItem("token"),
-          },
-        }
-      )
+      .post(`/product/${localStorage.getItem("id")}/addpdt`, fd_owner, {
+        headers: {
+          "x-auth-token": localStorage.getItem("token"),
+        },
+      })
       .then((res) => {
         console.log("Owner Updated");
       });
 
     let seller_id;
     //get seller email
-    await axios
-      .post("http://localhost:5000/buyer/one", { seller_email: buy_email })
-      .then((res) => {
-        console.log(res.data);
-        seller_id = res.data;
-      });
+    await axios.post("/buyer/one", { seller_email: buy_email }).then((res) => {
+      console.log(res.data);
+      seller_id = res.data;
+    });
 
     // update seller
     const fd_seller = new FormData();
@@ -72,12 +66,10 @@ function Ordermore_single_owner({
 
     //get owner email
     let owner_email;
-    await axios
-      .get(`http://localhost:5000/${localStorage.getItem("id")}`)
-      .then((res) => {
-        console.log(res.data);
-        owner_email = res.data.owner_email;
-      });
+    await axios.get(`/${localStorage.getItem("id")}`).then((res) => {
+      console.log(res.data);
+      owner_email = res.data.owner_email;
+    });
 
     //send email
     const fd_email = new FormData();
@@ -90,7 +82,7 @@ function Ordermore_single_owner({
 
     await axios.post(`/sendmail`, fd_email).then((res) => {
       console.log("emailsent");
-      window.location.href = "http://localhost:3000/owner/hone";
+      window.location.href = `${FrontEnd_URL}/owner/hone`;
     });
   };
   return (

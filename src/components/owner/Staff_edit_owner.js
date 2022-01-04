@@ -4,6 +4,7 @@ import { TextField, Button } from "@material-ui/core";
 import "../../css/owner/Staff_edit_owner.css";
 
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 function Staff_edit_owner() {
   let initVals = {
     staff_name: "",
@@ -51,7 +52,7 @@ function Staff_edit_owner() {
       .then((res) => {
         console.log(res);
         localStorage.removeItem("edit_id");
-        window.location.href = "http://localhost:3000/owner/staff";
+        window.location.href = `${FrontEnd_URL}/owner/staff`;
       })
       .catch((err) => {
         console.log(err.message);

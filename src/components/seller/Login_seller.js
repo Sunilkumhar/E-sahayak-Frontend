@@ -5,6 +5,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import "../../css/seller/Login_seller.css";
 
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 
 function Login_seller() {
   let initVals = { seller_email: "", seller_password: "" };
@@ -35,7 +36,7 @@ function Login_seller() {
         localStorage.setItem("token", res.data);
         seterr("");
         console.log(err);
-        window.location.href = "http://localhost:3000/seller/allpdts";
+        window.location.href = `${FrontEnd_URL}/seller/allpdts`;
       })
       .catch((err) => {
         seterr("Invalid Email-Id or Password");

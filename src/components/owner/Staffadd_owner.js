@@ -4,6 +4,7 @@ import { TextField, Button } from "@material-ui/core";
 import "../../css/owner/Staffadd_owner.css";
 
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 
 function Staffadd_owner() {
   let initVals = {
@@ -43,7 +44,7 @@ function Staffadd_owner() {
       })
       .then((res) => {
         console.log(res);
-        window.location.href = "http://localhost:3000/owner/staff";
+        window.location.href = `${FrontEnd_URL}/owner/staff`;
       })
       .catch((err) => {
         console.log(err.message);

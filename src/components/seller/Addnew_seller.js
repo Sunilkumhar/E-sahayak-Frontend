@@ -3,6 +3,7 @@ import { TextField, Button } from "@material-ui/core";
 
 import "../../css/seller/Addnew_seller.css";
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 
 function Addnew_seller() {
   const [buy_name, setbuy_name] = useState("");
@@ -41,7 +42,7 @@ function Addnew_seller() {
       })
       .then((res) => {
         console.log(res);
-        window.location.href = "http://localhost:3000/seller/allpdts";
+        window.location.href = `${FrontEnd_URL}/seller/allpdts`;
       })
       .catch((err) => {
         console.log(err);

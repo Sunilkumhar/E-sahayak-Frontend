@@ -5,6 +5,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import "../../css/owner/Login_owner.css";
 
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 
 function Login_owner() {
   let initVals = { owner_email: "", owner_password: "" };
@@ -35,7 +36,7 @@ function Login_owner() {
         localStorage.setItem("token", res.data);
         seterr("");
         console.log(err);
-        window.location.href = "http://localhost:3000/owner/home";
+        window.location.href = `${FrontEnd_URL}/owner/home`;
       })
       .catch((err) => {
         seterr("Invalid Email-Id or Password");

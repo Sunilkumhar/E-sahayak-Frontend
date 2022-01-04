@@ -12,6 +12,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import "../../css/seller/Register_seller.css";
 
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 
 function Register_seller() {
   let initVals = {
@@ -67,7 +68,7 @@ function Register_seller() {
         .then((res) => {
           console.log(res);
           localStorage.setItem("token", res.headers["x-auth-token"]);
-          window.location.href = "http://localhost:3000/seller/allpdts";
+          window.location.href = `${FrontEnd_URL}/seller/allpdts`;
           seterrmsg("");
         })
         .catch((err) => {

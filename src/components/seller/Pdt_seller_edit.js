@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import "../../css/seller/Pdt_seller_edit.css";
 
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 
 function Pdt_seller_edit() {
   const [buy_name, setbuy_name] = useState("");
@@ -52,7 +53,7 @@ function Pdt_seller_edit() {
       .then((res) => {
         console.log(123);
         localStorage.removeItem("edit_id");
-        window.location.href = "http://localhost:3000/seller/allpdts";
+        window.location.href = `${FrontEnd_URL}/seller/allpdts`;
       });
   };
 

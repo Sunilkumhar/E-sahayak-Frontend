@@ -7,6 +7,7 @@ import VisibilityIcon from "@material-ui/icons/Visibility";
 import "../../css/owner/Register_owner.css";
 
 import axios from "../../axios";
+import { FrontEnd_URL } from "../../baseURL";
 
 function Profile_edit_owner() {
   let initVals = {
@@ -62,7 +63,7 @@ function Profile_edit_owner() {
       })
       .then((res) => {
         console.log(123);
-        window.location.href = "http://localhost:3000/owner/profile";
+        window.location.href = `${FrontEnd_URL}/owner/profile`;
         seterrmsg("");
       })
       .catch((err) => {
